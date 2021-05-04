@@ -1,0 +1,39 @@
+<div nz-row class="margin">
+    <div nz-col  nzXs="24" nzLg="10"><h1 class="header">Weather in your city</h1></div>
+    <div nz-col  nzXs="24" nzLg="5" ><input class="search" nz-input placeholder="Enter City" [(ngModel)]="cityname" (keydown.enter)="searchCity()"/></div>
+  <div nz-col  nzXs="24" nzLg="3"><button class="save" nz-button (click)="searchCity()"><i nz-icon nzType="question-circle" nzTheme="outline"></i>Search</button></div>
+  <div nz-col  nzXs="24" nzLg="2"><nz-spin nzSimple [nzSize]="'large'" [nzSpinning]="spinn"></nz-spin></div>
+</div>
+
+<div  nz-row class="total">
+<div nz-col nzXs="24" nzLg="4" class="tablespace" *ngFor="let element of data">
+    <nz-table #basicTable [nzData]="data" [nzFrontPagination]="false" >
+        <thead>
+          <tr >
+            <th colspan="2" class="date">Date: {{element.date | date: 'dd/MM/yyyy'}}</th>
+          </tr>
+          <tr >
+            <th colspan="2" class="grey">Temperature</th>
+          </tr>
+          <tr >
+            <th class="grey">Min</th>
+            <th class="grey">Max</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr class="grey">
+            <td>{{element.temp_min}}</td>
+            <td>{{element.temp_max}}</td>
+        </tr>
+        <tr>
+            <td>Pressure</td>
+            <td>{{element.pressure}}</td>
+        </tr>
+        <tr>
+            <td>humidity</td>
+            <td>{{element.humidity}}</td>
+        </tr>
+        </tbody>
+      </nz-table>
+</div>
+</div>
