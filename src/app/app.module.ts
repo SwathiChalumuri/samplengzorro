@@ -11,12 +11,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzButtonModule } from 'ng-zorro-antd/button';
-import { NzGridModule } from 'ng-zorro-antd/grid';
 import { WeatherComponent } from './components/weather/weather.component';
-import { NzInputModule } from 'ng-zorro-antd/input';
-import { NzTableModule } from 'ng-zorro-antd/table';
-import { NzSpinModule } from 'ng-zorro-antd/spin';
-import { NzIconModule } from 'ng-zorro-antd/icon';
+import {ButtonModule} from 'primeng/button';
+import {InputTextModule} from 'primeng/inputtext';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {TableModule} from 'primeng/table';
 registerLocaleData(en);
 
 @NgModule({
@@ -31,11 +30,10 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     NzButtonModule,
-    NzGridModule,
-    NzInputModule,
-    NzTableModule,
-    NzSpinModule,
-    NzIconModule
+    ButtonModule,
+    InputTextModule,
+    ProgressSpinnerModule,
+    TableModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
