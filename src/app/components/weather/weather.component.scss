@@ -1,37 +1,33 @@
 .header{
-    text-align: center;
     color:#d26c22;
+    margin-top: 0px;
 }
-.margin{
-    margin-top: 20px;
+.align{
     text-align: center;
 }
-.save{
-    background-color:#d26c22;
-    color: white;
-    border-radius: 3px;
-}
-.ant-table-thead > tr > th .grey{
-    background-color: grey;
+.grey{
+    background-color: #c7c9ca;
 }
 .date{
     background-color: #d26c22;
 }
-.tablespace{
-    margin-right: 10px;
+::ng-deep .p-button {
+    background-color: #d26c22;
+    color: white;
+    border-radius: 3px;
+    border-color: #d26c22;
+  
 }
-.total{
-    padding-left: 150px;
-}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 8px;
+  }
 @media (min-width: 300px) and (max-width: 767px) {
-    .search {
-     margin-bottom: 20px;
-     width: 64%;
+    .tablealign{
+        margin: 0px 40px;
     }
-    .save{
-        width: 50%;
-    }
-    .total{
-        padding: 30px;
-    }
+    
   }
